@@ -1,4 +1,4 @@
-## BBC News Classification: Logistic Regression, SVM & Random Forest
+# BBC News Classification: Logistic Regression, SVM & Random Forest
 
 📌 **Project Overview**
 
