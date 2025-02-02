@@ -52,4 +52,4 @@ This project demonstrates the effectiveness of Logistic Regression, SVM, and Ran
 
 - Hyperparameter tuning for better performance
 
-### To get a more detailed understanding of this project, read the BBC report that I have attached with this project. 
+## To get a more detailed understanding of this project, read the BBC report that I have attached with this project. 
