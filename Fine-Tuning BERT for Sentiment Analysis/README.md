@@ -40,7 +40,7 @@ The raw text data is preprocessed to make it suitable for the model:
 
 --> The preprocessed text is stored in a new column called cleaned_text.
 
-**Tokenization**
+**Tokenization:**
 The text is tokenized using the DistilBERT tokenizer:
 
 - The tokenizer converts text into input IDs and attention masks.
