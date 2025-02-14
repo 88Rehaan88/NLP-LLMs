@@ -6,7 +6,6 @@ This project demonstrates how to fine-tune a DistilBERT model for sentiment anal
 **Dataset**
 The dataset consists of text samples with sentiment labels (0-4). Each row contains the following columns:
 
-text: 
 - The input text.
 
 - gold_label: The sentiment label:
