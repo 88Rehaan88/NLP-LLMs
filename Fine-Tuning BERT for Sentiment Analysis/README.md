@@ -1,6 +1,6 @@
 # Fine-Tuning DistilBERT for Sentiment Analysis:
 
-## GitHub Project Overview
+## Project Overview
 This project demonstrates how to fine-tune a DistilBERT model for sentiment analysis. DistilBERT is a smaller, faster, and lighter version of BERT that retains 95% of its performance. The model is trained on a dataset of text samples labeled with sentiment scores (0-4) and evaluated using accuracy, precision, recall, and F1-score.
 
 **Dataset**
