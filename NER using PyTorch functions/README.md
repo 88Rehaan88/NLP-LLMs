@@ -1,4 +1,4 @@
-# Building NER using Pytorch functions 
+# Building NER using Pytorch functions:
 
 ## Project Overview:
 This project demonstrates how to fine-tune a DistilBERT model for Named Entity Recognition (NER). The model is trained on the CoNLL-2003 dataset, which contains text samples annotated with four entity types:
@@ -13,7 +13,7 @@ This project demonstrates how to fine-tune a DistilBERT model for Named Entity R
 
 The model is evaluated using precision, recall, and F1-score for each entity type.
 
-### **Dataset**
+### **Dataset:**
 The CoNLL-2003 dataset is used for this project. It contains text samples annotated with four entity types:
 
 PER: Person
@@ -24,7 +24,7 @@ LOC: Location
 
 MISC: Miscellaneous
 
-**Dataset Splits**
+**Dataset Splits:**
 
 - Training Data: 14,041 samples
 
