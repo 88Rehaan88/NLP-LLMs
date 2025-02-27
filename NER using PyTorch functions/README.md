@@ -91,12 +91,11 @@ The fine-tuned model achieves the following performance metrics on the test set:
 
 - F1 Score: 87.95%
 
-Per-Entity Metrics
-Entity Type	Precision	Recall	F1 Score
-LOC	90%	92%	91%
-MISC	77%	75%	76%
-ORG	80%	87%	83%
-PER	96%	94%	95%
+  
+## NER Model performance by entity type: 
+
+![image](https://github.com/user-attachments/assets/df4111f9-c41d-4a86-a0a8-5201d93ecc7a)
+
 
 ### Per-Entity Metrics
 
