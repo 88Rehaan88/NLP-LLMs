@@ -38,39 +38,7 @@ ner_tags: The corresponding NER labels for each token.
 Setup
 To set up the project, follow these steps:
 
-Clone the Repository:
-
-bash
-Copy
-git clone https://github.com/your-username/finetune-distilbert-ner.git
-cd finetune-distilbert-ner
-Install Dependencies:
-Ensure you have Python 3.8+ installed. Then, install the required libraries:
-
-bash
-Copy
-pip install torch transformers datasets scikit-learn numpy seqeval
-Download the Dataset:
-The dataset is automatically downloaded using the datasets library.
-
-Usage
-To fine-tune the DistilBERT model, run the Jupyter Notebook or Python script:
-
-Jupyter Notebook
-Open the notebook:
-
-bash
-Copy
-jupyter notebook NER_FineTuning.ipynb
-Run all cells to preprocess the data, train the model, and evaluate it.
-
-Python Script
-Run the script:
-
-bash
-Copy
-python finetune_ner.py
-Workflow
+**Workflow**
 Data Preprocessing
 The dataset is loaded using the datasets library.
 
