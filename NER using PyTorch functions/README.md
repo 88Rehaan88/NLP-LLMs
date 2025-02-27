@@ -1,4 +1,6 @@
-## Project Overview
+# Building NER using Pytorch functions 
+
+## Project Overview:
 This project demonstrates how to fine-tune a DistilBERT model for Named Entity Recognition (NER). The model is trained on the CoNLL-2003 dataset, which contains text samples annotated with four entity types:
 
 - PER (Person)
@@ -22,7 +24,7 @@ LOC: Location
 
 MISC: Miscellaneous
 
-Dataset Splits
+**Dataset Splits**
 Training Data: 14,041 samples
 
 Validation Data: 3,250 samples
@@ -35,16 +37,14 @@ tokens: The input text split into tokens.
 
 ner_tags: The corresponding NER labels for each token.
 
-Setup
-To set up the project, follow these steps:
 
-**Workflow**
-Data Preprocessing
+## Workflow:
+**Data Preprocessing:**
 The dataset is loaded using the datasets library.
 
 Each sample contains tokens and ner_tags, which are used for training and evaluation.
 
-Tokenization
+**Tokenization:**
 The text is tokenized using the DistilBERT tokenizer.
 
 NER labels are aligned with the tokenized subwords:
@@ -53,7 +53,7 @@ Special tokens (e.g., [CLS], [SEP]) are assigned the label -100 (ignored during 
 
 Subword tokens are assigned the same label as their corresponding word.
 
-Training
+## Training:
 The DistilBERT model is fine-tuned with the following setup:
 
 Model: DistilBertForTokenClassification with 9 output classes (one for each NER label).
@@ -62,7 +62,7 @@ Optimizer: AdamW with a learning rate of 5e-5.
 
 Loss Function: Cross-entropy loss (ignoring padding tokens with ignore_index=-100).
 
-Training Arguments:
+**Training Arguments:**
 
 Batch size: 16
 
@@ -70,12 +70,12 @@ Epochs: 3
 
 Evaluation on the validation set after each epoch.
 
-Evaluation
+## Evaluation:
 The model is evaluated using precision, recall, and F1-score for each entity type.
 
 The seqeval library is used to compute entity-level metrics.
 
-Results
+### **Results:**
 The fine-tuned model achieves the following performance metrics on the test set:
 
 Overall Metrics
