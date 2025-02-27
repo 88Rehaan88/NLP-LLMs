@@ -94,8 +94,7 @@ The fine-tuned model achieves the following performance metrics on the test set:
   
 ## NER Model performance by entity type: 
 
-![image](https://github.com/user-attachments/assets/df4111f9-c41d-4a86-a0a8-5201d93ecc7a)
-
+<![image](https://github.com/user-attachments/assets/df4111f9-c41d-4a86-a0a8-5201d93ecc7a), width="600">
 
 ### Per-Entity Metrics
 
