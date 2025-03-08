@@ -137,6 +137,11 @@ This model enhances the base BERT model by integrating LoRA, which fine-tunes on
 | 4     | -               | 0.5636                     |
 | 5     | -               | 0.5527                     |
 
+![image](https://github.com/user-attachments/assets/3d80654a-f934-44a9-b052-89700d9a0380)
+
+## Conclusion: 
+Compared to full fine-tuning, LoRA reduces computational requirement while maintaining strong performance. The best-performing model achieves 63.57% test accuracy, outperforming baseline approaches.
+
 ### Why LoRA Outperformed Full Fine-Tuning?
 
 1. Avoids Overfitting: Full fine-tuning risks overfitting on a moderate-sized dataset, while LoRA prevents this by updating only specific layers.
