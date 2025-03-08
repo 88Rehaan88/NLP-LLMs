@@ -80,7 +80,7 @@ A BERT-based classifier fine-tuned on the entire dataset. It extracts contextual
 ### 2. **Improved Model (LoRA Fine-Tuned BERT):**
 This model enhances the base BERT model by integrating LoRA, which fine-tunes only attention layers, reducing computational requirements while maintaining strong performance.
 
-## Key Improvements
+## Key Improvements:
 
 - LoRA-Based Fine-Tuning: Only query and value attention layers are updated, keeping most of BERT frozen.
 
@@ -94,14 +94,16 @@ This model enhances the base BERT model by integrating LoRA, which fine-tunes on
 
 - Deeper Classifier Head: Two FC layers instead of one, with dropout for regularization.
 
-## LoRA Configurations:
+### LoRA Configurations:
 
-Config	r	LoRA Alpha	Target Modules	Dropout
-1	10	16	Query, Value	0.1
-2	12	15	Query, Value	0.1
-3	14	14	Query, Value	0.1
+| Config | r  | LoRA Alpha | Target Modules   | Dropout |
+|--------|----|------------|------------------|---------|
+| 1      | 10 |    16      | Query, Value     |   0.1   |
+| 2      | 12 |    15      | Query, Value     |   0.1   |
+| 3      | 14 |    14      | Query, Value     |   0.1   |
 
-- Training Enhancements
+
+**Training Enhancements:**
 
 - Optimizer: AdamW (lr=2e-5)
 
@@ -111,24 +113,27 @@ Config	r	LoRA Alpha	Target Modules	Dropout
 
 - Learning Rate Scheduler: Linear decay with warm-up
 
-**--> ==> Best Configuration: r=14, LoRA Alpha=14**
+**==> Best Configuration: r=14, LoRA Alpha=14**
 
 ## **Results and Analysis:**
 
-**Performance Comparison:**
+### **Performance Comparison:**
 
-Model	Validation Accuracy	Test Accuracy
-Base Model	57.68%	55.07%
-LoRA Model	64.73%	63.57%
+| Model         | Validation Accuracy | Test Accuracy |
+|---------------|---------------------|---------------|
+| Base Model    | 57.68%              | 55.07%        |
+| LoRA Model    | 64.73%              | 63.57%        |
 
-**Training Loss Convergence:
-**
-Epoch	Base Model Loss	LoRA Model Loss (Config 3)
-1	0.6705	0.6820
-2	0.5434	0.6244
-3	0.4069	0.5825
-4	-	0.5636
-5	-	0.5527
+
+###**Training Loss Convergence:**
+
+| Epoch | Base Model Loss | LoRA Model Loss (Config 3) |
+|-------|-----------------|----------------------------|
+| 1     | 0.6705          | 0.6820                     |
+| 2     | 0.5434          | 0.6244                     |
+| 3     | 0.4069          | 0.5825                     |
+| 4     | -               | 0.5636                     |
+| 5     | -               | 0.5527                     |
 
 ### Why LoRA Outperformed Full Fine-Tuning?
 
