@@ -113,7 +113,9 @@ This model enhances the base BERT model by integrating LoRA, which fine-tunes on
 
 - Learning Rate Scheduler: Linear decay with warm-up
 
+
 **==> Best Configuration: r=14, LoRA Alpha=14**
+
 
 ## **Results and Analysis:**
 
@@ -125,7 +127,7 @@ This model enhances the base BERT model by integrating LoRA, which fine-tunes on
 | LoRA Model    | 64.73%              | 63.57%        |
 
 
-###**Training Loss Convergence:**
+### **Training Loss Convergence:**
 
 | Epoch | Base Model Loss | LoRA Model Loss (Config 3) |
 |-------|-----------------|----------------------------|
