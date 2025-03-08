@@ -75,7 +75,7 @@ A BERT-based classifier fine-tuned on the entire dataset. It extracts contextual
 
 - No additional feature engineering for better word representation.
 
-----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ### 2. **Improved Model (LoRA Fine-Tuned BERT):**
 This model enhances the base BERT model by integrating LoRA, which fine-tunes only attention layers, reducing computational requirements while maintaining strong performance.
