@@ -80,50 +80,60 @@ A BERT-based classifier fine-tuned on the entire dataset. It extracts contextual
 ### 2. **Improved Model (LoRA Fine-Tuned BERT):**
 This model enhances the base BERT model by integrating LoRA, which fine-tunes only attention layers, reducing computational requirements while maintaining strong performance.
 
-Key Improvements
-LoRA-Based Fine-Tuning: Only query and value attention layers are updated, keeping most of BERT frozen.
+## Key Improvements
 
-Interaction-Based Features:
+- LoRA-Based Fine-Tuning: Only query and value attention layers are updated, keeping most of BERT frozen.
 
-Concatenation of target word embeddings from both sentences.
+- Interaction-Based Features:
 
-Element-wise multiplication to capture alignment.
+- Concatenation of target word embeddings from both sentences.
 
-Absolute difference to highlight semantic distinctions.
+- Element-wise multiplication to capture alignment.
 
-Deeper Classifier Head: Two FC layers instead of one, with dropout for regularization.
+- Absolute difference to highlight semantic distinctions.
 
-LoRA Configurations
+- Deeper Classifier Head: Two FC layers instead of one, with dropout for regularization.
+
+## LoRA Configurations:
+
 Config	r	LoRA Alpha	Target Modules	Dropout
 1	10	16	Query, Value	0.1
 2	12	15	Query, Value	0.1
 3	14	14	Query, Value	0.1
-Training Enhancements
-Optimizer: AdamW (lr=2e-5)
 
-Batch Size: 32
+- Training Enhancements
 
-Loss Function: CrossEntropyLoss
+- Optimizer: AdamW (lr=2e-5)
 
-Learning Rate Scheduler: Linear decay with warm-up
+- Batch Size: 32
 
-Best Configuration: r=14, LoRA Alpha=14
+- Loss Function: CrossEntropyLoss
 
-Results and Analysis
-Performance Comparison
+- Learning Rate Scheduler: Linear decay with warm-up
+
+**--> ==> Best Configuration: r=14, LoRA Alpha=14**
+
+## **Results and Analysis:**
+
+**Performance Comparison:**
+
 Model	Validation Accuracy	Test Accuracy
 Base Model	57.68%	55.07%
 LoRA Model	64.73%	63.57%
-Training Loss Convergence
+
+**Training Loss Convergence:
+**
 Epoch	Base Model Loss	LoRA Model Loss (Config 3)
 1	0.6705	0.6820
 2	0.5434	0.6244
 3	0.4069	0.5825
 4	-	0.5636
 5	-	0.5527
-Why LoRA Outperformed Full Fine-Tuning?
-Avoids Overfitting: Full fine-tuning risks overfitting on a moderate-sized dataset, while LoRA prevents this by updating only specific layers.
 
-Preserves Pre-Trained Knowledge: LoRA allows BERT’s linguistic knowledge to remain intact, leading to better generalization.
+### Why LoRA Outperformed Full Fine-Tuning?
 
-Efficient Parameter Updates: LoRA selectively fine-tunes attention mechanisms, making learning more stable.
+1. Avoids Overfitting: Full fine-tuning risks overfitting on a moderate-sized dataset, while LoRA prevents this by updating only specific layers.
+
+2. Preserves Pre-Trained Knowledge: LoRA allows BERT’s linguistic knowledge to remain intact, leading to better generalization.
+
+3. Efficient Parameter Updates: LoRA selectively fine-tunes attention mechanisms, making learning more stable.
